@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Registration form</h2>
+        <form id="signupForm" onclick="return validateForm()">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            <span id="nameError" class="error"></span>
+            <label for="fullname">Gender</label>
+            <span>
+            <label for="male" >
+                <input type="radio" name="gender" id="male">
+                Male
+            </label>
+            <label for="female" >
+                <input type="radio" name="gender" id="female">
+                Female
+            </label>
+            <label for="others" >
+                <input type="radio" name="gender" id="other"> Others
+            </label></span>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <span id="emailError" class="error"></span>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter a strong password" required minlength="8">
+            <span id="passwordError" class="error"></span>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <span id="confirmPasswordError" class="error"></span>
+          
+            <label for="Address">Address</label>
+            <textarea id="Address" name="Address" placeholder="Enter your address" required></textarea>
+           
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
